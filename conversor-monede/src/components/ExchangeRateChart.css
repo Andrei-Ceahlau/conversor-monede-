@@ -1,0 +1,59 @@
+.chart-container {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dark-mode .chart-container {
+    background: #334155;
+    color: white;
+  }
+  
+  .chart-container p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #374151;
+  }
+  
+  .dark-mode .chart-container p {
+    color: #d1d5db;
+  }
+  
+  /* Efect de apariție pentru grafic */
+.chart-container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+  
+  /* Animația fade-in + slide-up */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .chart-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .chart-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
